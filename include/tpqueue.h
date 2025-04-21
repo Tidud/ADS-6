@@ -10,7 +10,7 @@ class TPQueue {
     if (data.empty()) {
       data.push_back(item);
       return;
-    } 
+    }
     auto it = data.begin();
     while (it != data.end() && it->prior >= item.prior) {
       ++it;
@@ -18,7 +18,7 @@ class TPQueue {
     data.insert(it, item);
   }
 
-  T pop() { 
+  T pop() {
     T temp = data.front();
     data.pop_front();
     return temp;
